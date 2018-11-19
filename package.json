@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "startup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteveWooo/blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SteveWooo/blog/issues"
+  },
+  "homepage": "https://github.com/SteveWooo/blog#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mavon-editor": "^2.6.17"
+  }
+}
