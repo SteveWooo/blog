@@ -1,6 +1,7 @@
 const express = require("express");
 
 async function server_startup(swc){
+	swc.app.use("/public", express.static("public"));
 	swc.app.listen(swc.config.server.port, ()=>{
 		console.log("config : ");
 		console.info(swc.config);
