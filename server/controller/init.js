@@ -18,8 +18,10 @@ function resp(req, res){
 module.exports = async(swc)=>{
 	var router = { //只能在这里调用router
 		content : require("./content"),
+		image_upload : require("./image_upload")
 	}
-	swc.app.get("/content", (req, res, next)=>{req.swc = swc;next()}, reqe, router.content, resp);
+	swc.app.get("/v1/content", (req, res, next)=>{req.swc = swc;next()}, reqe, router.content, resp);
+	swc.app.post("/v1/image_upload", (req, res, next)=>{req.swc = swc;next()}, reqe, router.image_upload, resp);
 
 	return swc;
 }

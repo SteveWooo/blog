@@ -2,6 +2,7 @@ const express = require("express");
 
 async function server_startup(swc){
 	swc.app.use("/public", express.static("public"));
+	swc = await require("./controller/init")(swc);
 	swc.app.listen(swc.config.server.port, ()=>{
 		console.log("config : ");
 		console.info(swc.config);
@@ -17,7 +18,6 @@ module.exports = async (config)=>{
 		app : express()
 	}
 	//router
-	swc = await require("./controller/init")(swc);
 	await server_startup(swc);
 
 	return swc;
