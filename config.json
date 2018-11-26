@@ -1,5 +1,12 @@
 {
 	"server" : {
 		"port" : "82"
+	},
+	"mysql" : {
+		"host"     : "localhost",
+  		"user"     : "root",
+  		"password" : "111111",
+  		"database" : "blog",
+  		"port" : "3306"
 	}
 }
