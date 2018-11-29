@@ -8,7 +8,7 @@ Vue.component('blog-content', {
 		}
 	},
 	mounted : function(){
-		console.log(vue.global.blog.title = "test")	
+		console.log(vue.global.blog.title = "test");
 	},
 	template: 
 `<v-container grid-list-md text-xs-center>
