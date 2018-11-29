@@ -7,31 +7,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-<!-- 	<div id="app">
-		<div v-for="blog in blogs">
-			<blog v-bind:title="blog.title"></blog>
-		</div>
-	</div> -->
 	<div id="app">
-	    <v-app>
-	      <v-toolbar app>
-	        <v-toolbar-title>My Application</v-toolbar-title>
-	        <div>
-				<v-breadcrumbs :items="items" divider=">"></v-breadcrumbs>
-				</div>
-	      </v-toolbar>
-	      <v-navigation-drawer app></v-navigation-drawer>
-	      <v-content>
-	        <v-container fluid>
-	          Hello World
-	        </v-container>
-	      </v-content>
-	      <v-footer></v-footer>
-	    </v-app>
-	  </div>
+	    <v-toolbar app>
+        	<v-toolbar-title>SteveWooo'</v-toolbar-title>
+        <!-- <div>
+			<v-breadcrumbs :items="items" divider=">"></v-breadcrumbs>
+		</div> -->
+      	</v-toolbar>
+      <!-- <v-navigation-drawer app></v-navigation-drawer> -->
+      	<v-content>
+        	<router-view>
+      			<component v-bind:is="router" v-bind:global="global"></component>
+      		</router-view>
+      	</v-content>
+      <v-footer app></v-footer>
+ 	</div>
 	<script type="text/javascript" src="dist/jquery.min.js"></script>
 	<script type="text/javascript" src="dist/vue.min.js"></script>
 	<script src="./dist/vuetify.min.js"></script>
+	<script type="text/javascript" src="js/components/blog/blog.js"></script>
+	<script type="text/javascript" src="js/components/blog/blog_content.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

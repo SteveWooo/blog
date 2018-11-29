@@ -1,34 +1,28 @@
-Vue.component('blog', {
-	props: ['title'],
-	template: '<h3>{{ title }}</h3>'
-})
-
 var vue = new Vue({
-	el: '#app',
-	data: {
-		blogs : [{
-			title : "demo"
-		}, {
-			title : "aah"
-		}],
-		items: [
-        {
-          text: 'Dashboard',
-          disabled: false,
-          href: 'breadcrumbs_dashboard'
-        },
-        {
-          text: 'Link 1',
-          disabled: false,
-          href: 'breadcrumbs_link_1'
-        },
-        {
-          text: 'Link 2',
-          disabled: true,
-          href: 'breadcrumbs_link_2'
-        }
-      ]
+	el : "#app",
+	data : {
+		router : "",
+		global : {
+			blog : {
+				title : "haha",
+				content : "haha",
+				create_time : new Date()
+			},
+			config : {
+				number : 1
+			}
+		}
+	},
+	methods : {
+		init : function(){
+			var that = this;
+			this.router = location.hash.substring(1);
+			window.onhashchange = function(){
+				that.router = location.hash.substring(1);
+			}
+		}
+	},
+	mounted : function(){
+		this.init();
 	}
 })
-
-console.log(vue)
